@@ -124,6 +124,7 @@ To evaluate the performance of RAG retrievals using the Tonic Validate framework
   TONIC_VALIDATE_API_KEY=your_tonic_validate_api_key
   TONIC_VALIDATE_PRODUCT_KEY=your_tonic_validate_product_key
   TONIC_VALIDATE_BENCHMARK_KEY=your_tonic_validate_benchmark_key  # Optional
+
 2. Run the evaluation script.
 ```markdown
    python evaluate.py
