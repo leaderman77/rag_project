@@ -29,9 +29,9 @@ def setup_logging():
 
 def initialize_environment():
     load_config()
-    os.environ["TONIC_VALIDATE_API_KEY"] = "1FfLbdsoaL1diMBxN8ConrdeXJgUGeUu4txMd7Xuc6c"
-    os.environ["TONIC_VALIDATE_PROJECT_KEY"] = "b9df0eaf-5f47-4639-b3db-25487214e8ab"
-    os.environ["TONIC_VALIDATE_BENCHMARK_KEY"] = "b04208f0-c571-4e72-a1be-e61f73caa429"
+    os.environ["TONIC_VALIDATE_API_KEY"] = os.getenv("TONIC_VALIDATE_API_KEY")
+    os.environ["TONIC_VALIDATE_PROJECT_KEY"] = os.getenv("TONIC_VALIDATE_PROJECT_KEY")
+    os.environ["TONIC_VALIDATE_BENCHMARK_KEY"] = os.getenv("TOMIC_VALIDATE_BENCHMARK_KEY")
     api_keys = {
         'openai': os.getenv("OPENAI_API_KEY"),
         'tonic_validate': os.getenv("TONIC_VALIDATE_API_KEY"),
