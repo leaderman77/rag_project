@@ -6,8 +6,8 @@ This project implements a RAG-powered Question Answering application, focusing o
 - Features
 - Prerequisites
 - Installation and Usage
-- Option 1: Using Conda Environment
-- Option 2: Using Docker (Recommended)
+- Option 1: Using Docker (Recommended)
+- Option 2: Using Conda Environment
 - Project Structure
 - Evaluation
 - Troubleshooting
@@ -39,14 +39,14 @@ This project implements a RAG-powered Question Answering application, focusing o
 
 ### Option 1: Using Docker (Recommended)
 1. Clone the repository:
-git clone https://github.com/your-username/smartretrieval-rag.git
-cd smartretrieval-rag
+   git clone https://github.com/your-username/smartretrieval-rag.git
+   cd smartretrieval-rag
 
 2. Provide your OpenAI API Key in .env file located in the root directory:
-OPENAI_API_KEY=your_openai_api_key_here
+   OPENAI_API_KEY=your_openai_api_key_here
 
 3. Build and run the Docker container:
-docker-compose up --build
+   docker-compose up --build
 
 ### Option 2: Using Conda Environment
 
