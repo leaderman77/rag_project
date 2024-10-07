@@ -59,6 +59,7 @@ This project implements a RAG-powered Question Answering application, focusing o
 3. Create a .env file in the root directory and add your OpenAI API Key:
    OPENAI_API_KEY=your_openai_api_key_here
 4. Run the application:
+   ```markdown
    python main.py
 
 ### Access to Gradio and FastAPI
@@ -66,6 +67,8 @@ Access the Gradio interface at [http://localhost:8000](http://localhost:8000/) i
 To use the FastAPI service, send a POST request to http://localhost:8000/ask as described in Option 1.
 
 ## Project Structure
+
+```plaintext
 smartretrieval-rag/
 │
 ├── main.py                 # Entry point for the application
