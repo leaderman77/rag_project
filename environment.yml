@@ -1,19 +1,19 @@
-name: rag_venv
+name: rag_project_venv
 channels:
   - conda-forge
   - anaconda
 dependencies:
-  - python=3.12.5=h889d299_0_cpython
-  - gradio=3.24.1=pyhd8ed1ab_0
-  - fastapi=0.115.0=pyhd8ed1ab_0
-  - pip=24.2=pyh8b19718_1
+  - python=3.12.5
+  - gradio=3.24.1
+  - fastapi=0.115.0
+  - pip
   - pip:
-      - llama-index=0.11.16=pypi_0
-      - llama-index-core=0.11.16=pypi_0
-      - llama-index-readers-file=0.2.2=pypi_0
-      - llama-index-embeddings-huggingface=0.3.1=pypi_0
-      - llama-index-llms-openai=0.2.11=pypi_0
-      - llama-index-embeddings-openai=0.2.5=pypi_0
-      - llama-index-graph-stores-neo4j=0.3.2=pypi_0
-      - python-dotenv=1.0.1=pypi_0
-      - tonic-validate=6.1.0=pypi_0
+      - llama-index==0.11.16
+      - llama-index-core==0.11.16
+      - llama-index-readers-file==0.2.2
+      - llama-index-embeddings-huggingface==0.3.1
+      - llama-index-llms-openai==0.2.11
+      - llama-index-embeddings-openai==0.2.5
+      - llama-index-graph-stores-neo4j==0.3.2
+      - python-dotenv==1.0.1
+      - tonic-validate==6.1.0
