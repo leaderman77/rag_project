@@ -1,6 +1,6 @@
 import pandas as pd
 from dotenv import load_dotenv
-
+import os
 
 # Function to load and validate configuration settings
 def load_config():
@@ -43,6 +43,9 @@ def make_get_llama_response(query_engine):
 
 def run_experiment(experiment_name, query_engine, scorer, benchmark,
                    validate_api, project_key, upload_results=True, runs=5):
+
+    load_config()
+
     # List to store results dictionaries
     results_list = []
 
@@ -59,7 +62,7 @@ def run_experiment(experiment_name, query_engine, scorer, benchmark,
         results_list.append({'Run': i+1, 'Experiment': experiment_name, 'OverallScores': run.overall_scores})
 
         if upload_results:
-          project_key="b9df0eaf-5f47-4639-b3db-25487214e8ab"
+          project_key = os.getenv("TONIC_VALIDATE_PROJECT_KEY")
           validate_api.upload_run(project_key, run=run, run_metadata={"approach": experiment_name, "run_number": i+1})
         else:
           print(f"Skipping upload for {experiment_name} Run {i+1}.")
