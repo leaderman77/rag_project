@@ -115,7 +115,7 @@ smartretrieval-rag/
 ├── statistical_analysis_results.xlsx      # Statistical analysis of evaluation
 └── utils.py                               # Utilty methods
 ```
-
+```
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
 
