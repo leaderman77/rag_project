@@ -69,30 +69,51 @@ This project implements a RAG-powered Question Answering application, focusing o
    python main.py
 
 ### Access to Gradio and FastAPI
-Access the Gradio interface at [http://localhost:8000](http://localhost:8000/) in your web browser.
-To use the FastAPI service, send a POST request to http://localhost:8000/ask as described in Option 1.
+- Access the Gradio interface at [http://localhost:8000](http://localhost:8000/) in your web browser.
+- To use the FastAPI service, send a POST request to http://localhost:8000/ask as described in Option 1.
 
 ## Project Structure
 
 ```plaintext
 smartretrieval-rag/
 │
-├── main.py                 # Entry point for the application
-├── app/
-│   ├── api.py              # FastAPI routes and endpoints
-│   ├── gradio_interface.py # Gradio web interface
-│   └── rag/
-│       ├── indexing.py     # Vector and knowledge graph indexing
-│       └── retrieval.py    # Retrieval methods implementation
-├── data/
-│   └── papers/             # AI and LLM research papers
-├── storage/                # Indexed data storage
-├── resources/              # Additional resources
-├── tests/                  # Unit and integration tests
-├── Dockerfile              # Docker configuration
-├── docker-compose.yml      # Docker Compose configuration
-├── environment.yml         # Conda environment specification
-└── requirements.txt        # Python dependencies
+├── main.py                                # Entry point for the application
+├── data/                                  # AI and LLM research papers
+├── eval_questions/
+│   ├── benchmark.json                     # Benchmark questions and ground truth used for evaluation
+├── flagged/                               # Flagged data directory
+├── resources/
+│   └── text_qa_template.txt               # Response template
+├── storage/
+│   ├── auto_index/                        # Auto-Merging retrieval based vector indexing
+│   ├── base_index/                        # Conventional retrieval based vector indexing
+│   ├── kg_index/                          # Knowledge-graph retrieval based knowledge graph indexing
+│   └── sentence_index/                    # Sentence window retrieval based vector indexing
+├── Dockerfile                             # Docker configuration
+├── docker-compose.yml                     # Docker Compose configuration
+├── environment.yml                        # Conda environment specification
+└── requirements.txt                       # Python dependencies, used for docker
+├── .env                                   # Environment variables file
+├── .gitignore      
+├── docker-compose.yml
+├── Dockerfile
+├── environment.yml                        # Conda environment specification
+├── evaluation.py                          # Evaluation file
+├── evaluation_results_experiement_1.xlsx
+├── evaluation_results_experiement_2.xlsx
+├── final_results_test.xlsx              
+├── load_papers.py                         # Load dataset papers
+├── models.py                              # FastAPI model
+├── parsed_documents.pkl                   # Stored dataset
+├── process_documents.py                   # Process documents
+├── process_retriever_index.py             # Creating and loading retrievals
+├── rag_engine.py                          # RAG engines called
+├── rag_result_analysis.ipynb              # Evaluation analysis
+├── README.md
+├── requirements.txt                       # Python dependencies
+├── statistical_analysis.py                # Statistical analysis of evaluation
+├── statistical_analysis_results.xlsx      # Statistical analysis of evaluation
+└── utils.py                               # Utilty methods
 ```
 
 ### Evaluation
