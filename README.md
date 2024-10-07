@@ -70,7 +70,10 @@ This project implements a RAG-powered Question Answering application, focusing o
 
 ### Access to Gradio and FastAPI
 - Access the Gradio interface at [http://localhost:8000](http://localhost:8000/) in your web browser.
+  ![image](https://github.com/user-attachments/assets/dc7c326f-93e1-4641-81d5-b23850a76e73)
+
 - To use the FastAPI service, send a POST request to http://localhost:8000/ask as described in Option 1.
+  ![image](https://github.com/user-attachments/assets/e163d19c-1fec-490b-877b-99f424ef2e42)
 
 ## Project Structure
 
@@ -145,8 +148,8 @@ We welcome contributions! Please follow these steps:
 
 1. Fork the repository
 2. Create your feature branch (```git checkout -b feature/AmazingFeature```)
-3. Commit your changes (git commit -m 'Add some AmazingFeature')
-4. Push to the branch (git push origin feature/AmazingFeature)
+3. Commit your changes (```git commit -m 'Add some AmazingFeature'```)
+4. Push to the branch (```git push origin feature/AmazingFeature```)
 5. Open a Pull Request
 
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
