@@ -16,7 +16,7 @@ This project implements a RAG-powered Question Answering application, focusing o
   
 ## Features
 
-- Implements multiple retrieval methods:
+- **Implements multiple retrieval methods**:
   - Standard base retrieval
   - Sentence window retrieval
   - Auto-merging retrieval
