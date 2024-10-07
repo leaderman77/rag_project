@@ -6,8 +6,8 @@ This project implements a RAG-powered Question Answering application, focusing o
 - Features
 - Prerequisites
 - Installation and Usage
-- Option 1: Using Docker (Recommended)
-- Option 2: Using Conda Environment
+  - Option 1: Using Docker (Recommended)
+  - Option 2: Using Conda Environment
 - Project Structure
 - Evaluation
 - Troubleshooting
@@ -93,7 +93,7 @@ smartretrieval-rag/
 ├── docker-compose.yml      # Docker Compose configuration
 ├── environment.yml         # Conda environment specification
 └── requirements.txt        # Python dependencies
-```plaintext
+```
 
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
