@@ -115,19 +115,19 @@ smartretrieval-rag/
 ├── statistical_analysis_results.xlsx      # Statistical analysis of evaluation
 └── utils.py                               # Utilty methods
 ```
-```
+
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
 
 1. Add the following keys to your .env file:
 ```markdown
-  TONIC_VALIDATE_API_KEY=your_tonic_validate_api_key
-  TONIC_VALIDATE_PRODUCT_KEY=your_tonic_validate_product_key
-  TONIC_VALIDATE_BENCHMARK_KEY=your_tonic_validate_benchmark_key  # Optional
+TONIC_VALIDATE_API_KEY=your_tonic_validate_api_key
+TONIC_VALIDATE_PRODUCT_KEY=your_tonic_validate_product_key
+TONIC_VALIDATE_BENCHMARK_KEY=your_tonic_validate_benchmark_key  # Optional
 
 2. Run the evaluation script.
 ```markdown
-   python evaluate.py
+python evaluate.py
 
 ## Troubleshooting
 
