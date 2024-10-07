@@ -39,26 +39,32 @@ This project implements a RAG-powered Question Answering application, focusing o
 
 ### Option 1: Using Docker (Recommended)
 1. Clone the repository:
+   ```markdown
    git clone https://github.com/your-username/smartretrieval-rag.git
    cd smartretrieval-rag
 
-2. Provide your OpenAI API Key in .env file located in the root directory:
+3. Provide your OpenAI API Key in .env file located in the root directory:
+   ```markdown
    OPENAI_API_KEY=your_openai_api_key_here
 
-3. Build and run the Docker container:
+4. Build and run the Docker container:
+   ```markdown
    docker-compose up --build
 
 ### Option 2: Using Conda Environment
 
 1. Clone the repository:
+   ```markdown
    git clone https://github.com/your-username/smartretrieval-rag.git
    cd smartretrieval-rag
-2. Create and activate the Conda environment:
+3. Create and activate the Conda environment:
+   ```markdown
    conda env create -f environment.yml
    conda activate rag_project_env
-3. Create a .env file in the root directory and add your OpenAI API Key:
+4. Create a .env file in the root directory and add your OpenAI API Key:
+   ```markdown
    OPENAI_API_KEY=your_openai_api_key_here
-4. Run the application:
+5. Run the application:
    ```markdown
    python main.py
 
@@ -87,15 +93,18 @@ smartretrieval-rag/
 ├── docker-compose.yml      # Docker Compose configuration
 ├── environment.yml         # Conda environment specification
 └── requirements.txt        # Python dependencies
+```plaintext
 
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
 
 1. Add the following keys to your .env file:
+```markdown
   TONIC_VALIDATE_API_KEY=your_tonic_validate_api_key
   TONIC_VALIDATE_PRODUCT_KEY=your_tonic_validate_product_key
   TONIC_VALIDATE_BENCHMARK_KEY=your_tonic_validate_benchmark_key  # Optional
 2. Run the evaluation script.
+```markdown
    python evaluate.py
 
 ## Troubleshooting
