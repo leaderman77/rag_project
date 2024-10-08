@@ -118,6 +118,25 @@ smartretrieval-rag/
 ├── statistical_analysis_results.xlsx      # Statistical analysis of evaluation
 └── utils.py                               # Utilty methods
 ```
+```mermaid
+graph TD
+    A[Data Ingestion] -->|AI & LLM Research Papers| B[Vector Index Store (LLamaIndex)]
+    A --> C[Knowledge Graph (Neo4j)]
+    B --> D[Retrieval-Augmented Generation (RAG)]
+    C --> D
+    D -->|Gradio Web App| E[User Interface]
+    D -->|FastAPI Service| F[API Integration]
+    E --> G[Docker for Deployment & Scaling]
+    F --> G
+```
+### Explanation:
+- **Data Ingestion**: Represents the AI and LLM research papers that are used to create the vector index and knowledge graph.
+- **Vector Index Store (LLamaIndex)**: Handles vector indexing for data retrieval.
+- **Knowledge Graph (Neo4j)**: Manages relationships between different data entities.
+- **Retrieval-Augmented Generation (RAG)**: Uses both vector index and knowledge graph to generate responses.
+- **Gradio Web App**: Allows interactive testing of the RAG model.
+- **FastAPI Service**: Provides an API interface for integration with other systems.
+- **Docker for Deployment & Scaling**: Ensures easy deployment and scalability of the application.
 
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
