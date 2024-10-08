@@ -1,6 +1,6 @@
 # SmartRetrieval RAG Project
 
-This project implements a RAG-powered Question Answering application, focusing on optimizing retrieval techniques to enhance response accuracy and contextual relevance. It employs the LlamaIndex framework with its in-built vector store and Neo4j for knowledge management to assess various advanced retrieval methods.
+This project implements a RAG-powered Question Answering application, integrating large language models to improve response accuracy and contextual relevance. It employs the LLamaIndex framework with an in-built vector store and Neo4j for knowledge management, and compares different retrieval techniques against a base RAG approach. The project includes a web-based interface using Gradio and a FastAPI service for model integration.
 
 ### Table of Contents
 - Features
@@ -13,7 +13,33 @@ This project implements a RAG-powered Question Answering application, focusing o
 - Troubleshooting
 - Contributing
 - License
-  
+
+### Project Overview
+- RAG Techniques Evaluated:
+
+  - Standard Base Retrieval
+  - Sentence Window Retrieval
+  - Auto-Merging Retrieval
+  - Knowledge Graph-Based Retrieval
+- Technologies Used:
+
+  - LLamaIndex: For building vector indexes and knowledge graph-based retrieval.
+  - Neo4j: For knowledge management and graph-based retrieval methods.
+  - Gradio: For creating a user-friendly web interface to test the model.
+  - FastAPI: For deploying the model as a web service.
+  - Docker: For containerizing and scaling the application.
+  - Tonic Validate Framework: For evaluating the performance of RAG retrievals.
+  - OpenAI API: For model responses.
+- Dataset:
+
+  - 10 research papers on Artificial Intelligence (AI) and Large Language Models (LLMs).
+
+### Prerequisites
+Before you begin, make sure you have the following:
+
+- OpenAI API Key: You need to provide your OpenAI API key in a ```.env``` file at the root of the project.
+- Tonic Validate API Key: To evaluate retrieval methods, provide the ```TONIC_VALIDATE_API_KEY```, ```TONIC_VALIDATE_PRODUCT_KEY```, and optionally the ```TONIC_VALIDATE_BENCHMARK_KEY``` in the .env file.
+
 ## Features
 
 - **Implements multiple retrieval methods**:
@@ -28,28 +54,23 @@ This project implements a RAG-powered Question Answering application, focusing o
 - **Scalability**: Docker support for effortless deployment and scaling
 - **Performance Metrics**: Evaluation using the Tonic Validate framework
 
-## Prerequisites
+## Setup Instructions
 
-- Python 3.12+
-- Docker and Docker Compose (for containerized deployment)
-- OpenAI API Key
-- (Optional) Tonic Validate API Key, Product Key, and Benchmark Key for evaluation
-
-## Installation and Usage
+There are two main ways to set up and run this project:
 
 ### Option 1: Using Docker (Recommended)
 1. Clone the repository:
    ```markdown
    git clone https://github.com/your-username/smartretrieval-rag.git
    cd smartretrieval-rag
+   ```
+2. Ensure Docker is Installed: Make sure Docker is installed and running on your system.
 
-3. Provide your OpenAI API Key in .env file located in the root directory:
-   ```markdown
-   OPENAI_API_KEY=your_openai_api_key_here
-
-4. Build and run the Docker container:
+3. Run Docker Compose: In the project root directory, execute the following command:
    ```markdown
    docker-compose up --build
+   ```
+This will create the Docker containers, set up the environment, and start both the Gradio and FastAPI services.
 
 ### Option 2: Using Conda Environment
 
@@ -57,19 +78,22 @@ This project implements a RAG-powered Question Answering application, focusing o
    ```markdown
    git clone https://github.com/your-username/smartretrieval-rag.git
    cd smartretrieval-rag
-3. Create and activate the Conda environment:
+   ```
+2. Create and activate the Conda environment:
    ```markdown
    conda env create -f environment.yml
    conda activate rag_project_env
-4. Create a .env file in the root directory and add your OpenAI API Key:
-   ```markdown
-   OPENAI_API_KEY=your_openai_api_key_here
-5. Run the application:
+   ```
+3. Run the application:
    ```markdown
    python main.py
+   ```
+## Usage Example
 
 ### Access to Gradio and FastAPI
 - Access the Gradio interface at [http://localhost:8000](http://localhost:8000/) in your web browser.
+- Gradio Web App: You can ask questions like:
+  - "Can you describe the modifications LLaMA makes to the transformer architecture for improved performance?"
   ![image](https://github.com/user-attachments/assets/dc7c326f-93e1-4641-81d5-b23850a76e73)
 
 - To use the FastAPI service, send a POST request to http://localhost:8000/ask as described in Option 1.
@@ -118,25 +142,8 @@ smartretrieval-rag/
 ├── statistical_analysis_results.xlsx      # Statistical analysis of evaluation
 └── utils.py                               # Utilty methods
 ```
-```mermaid
-graph TD
-    A[Data Ingestion] -->|AI & LLM Research Papers| B[Vector Index Store (LLamaIndex)]
-    A --> C[Knowledge Graph (Neo4j)]
-    B --> D[Retrieval-Augmented Generation (RAG)]
-    C --> D
-    D -->|Gradio Web App| E[User Interface]
-    D -->|FastAPI Service| F[API Integration]
-    E --> G[Docker for Deployment & Scaling]
-    F --> G
-```
-### Explanation:
-- **Data Ingestion**: Represents the AI and LLM research papers that are used to create the vector index and knowledge graph.
-- **Vector Index Store (LLamaIndex)**: Handles vector indexing for data retrieval.
-- **Knowledge Graph (Neo4j)**: Manages relationships between different data entities.
-- **Retrieval-Augmented Generation (RAG)**: Uses both vector index and knowledge graph to generate responses.
-- **Gradio Web App**: Allows interactive testing of the RAG model.
-- **FastAPI Service**: Provides an API interface for integration with other systems.
-- **Docker for Deployment & Scaling**: Ensures easy deployment and scalability of the application.
+## Architecture diagram
+![architecture diagram](https://github.com/user-attachments/assets/9e620a12-9c23-4159-b242-207cc2a21f9e)
 
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
