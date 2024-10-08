@@ -2,18 +2,6 @@
 
 This project implements a RAG-powered Question Answering application, integrating large language models to improve response accuracy and contextual relevance. It employs the LLamaIndex framework with an in-built vector store and Neo4j for knowledge management, and compares different retrieval techniques against a base RAG approach. The project includes a web-based interface using Gradio and a FastAPI service for model integration.
 
-### Table of Contents
-- Features
-- Prerequisites
-- Installation and Usage
-  - Option 1: Using Docker (Recommended)
-  - Option 2: Using Conda Environment
-- Project Structure
-- Evaluation
-- Troubleshooting
-- Contributing
-- License
-
 ### Project Overview
 - RAG Techniques Evaluated:
 
