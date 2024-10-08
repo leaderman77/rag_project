@@ -1,0 +1,23 @@
+# Docker Compose configuration for SmartRetrieval RAG project
+services:
+  app:
+    # Use the image from Docker Hub
+    image: sardorasatillaev/smartretrieval_rag:v1
+    # Build the image from the current directory if needed
+    build: .
+    # Map port 8000 on the host to port 8000 in the container
+    ports:
+      - "8000:8000"
+    # Load environment variables from .env file
+    env_file:
+      - .env
+    # Mount volumes for persistent storage
+    volumes:
+      - ./storage/base_index:/app/base_index
+      - ./storage/sentence_index:/app/sentence_index
+      - ./storage/auto_index:/app/auto_index
+      - ./storage/kg_index:/app/kg_index
+      - ./resources:/app/resources
+    # Explicitly set critical environment variables
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
