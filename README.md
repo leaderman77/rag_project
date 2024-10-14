@@ -1,4 +1,4 @@
-# SmartRetrieval RAG Project
+# An Empirical Analysis of Optimization Techniques for Retrieval-Augmented Generation
 
 This project implements a RAG-powered Question Answering application, integrating large language models to improve response accuracy and contextual relevance. It employs the LLamaIndex framework with an in-built vector store and Neo4j for knowledge management, and compares different retrieval techniques against a base RAG approach. The project includes a web-based interface using Gradio and a FastAPI service for model integration.
 
@@ -131,7 +131,7 @@ smartretrieval-rag/
 └── utils.py                               # Utilty methods
 ```
 ## Architecture diagram
-![architecture diagram](https://github.com/user-attachments/assets/9e620a12-9c23-4159-b242-207cc2a21f9e)
+![RAG_architecture](https://github.com/user-attachments/assets/fe8b518b-a6e5-4953-b985-28e08be12807)
 
 ### Evaluation
 To evaluate the performance of RAG retrievals using the Tonic Validate framework:
