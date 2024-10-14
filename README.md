@@ -168,4 +168,14 @@ We welcome contributions! Please follow these steps:
 
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
-### License
+## Citation
+
+If you use this project or refer to its research in academic work, please cite it as follows:
+
+```bibtex
+@misc{asatillaev2024rag,
+  author = {Sardor Asatillaev},
+  title = {An Empirical Analysis of Optimization Techniques for Retrieval-Augmented Generation},
+  year = {2024},
+  url = {https://github.com/your-username/smartretrieval-rag/docs/An_Empirical_Analysis_of_Optimization_Techniques_for_Retrieval-Augmented_Generation.pdf}
+}
