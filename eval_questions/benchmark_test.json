@@ -1,9 +1,0 @@
-{
-    "questions": [
-        "What are the two main tasks BERT is pre-trained on?",
-        "What model sizes are reported for BERT, and what are their specifications?",
-        ],
-    "ground_truths": [
-        "Masked LM (MLM) and Next Sentence Prediction (NSP).",
-        "BERTBASE (L=12, H=768, A=12, Total Parameters=110M) and BERTLARGE (L=24, H=1024, A=16, Total Parameters=340M)."]
-}
