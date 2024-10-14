@@ -120,7 +120,7 @@ def load_query_engines(
 def load_benchmark():
     import json
     # Load questions and answers from benchmark.json
-    with open('eval_questions/benchmark.json', 'r') as file:
+    with open('../eval_questions/benchmark.json', 'r') as file:
         benchmark_data = json.load(file)
         questions = benchmark_data['questions']
         ground_truths = benchmark_data['ground_truths']

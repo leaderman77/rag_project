@@ -1,2 +1,6 @@
 # Ignore storage directory
 storage/
+.idea/
+__pycache__/
+eval_questions/benchmark_test.json
+.env
